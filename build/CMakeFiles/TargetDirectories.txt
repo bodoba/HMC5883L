@@ -1,0 +1,3 @@
+/Users/bb/Desktop/Build/HMC5882L/build/CMakeFiles/hmc5883l.dir
+/Users/bb/Desktop/Build/HMC5882L/build/CMakeFiles/edit_cache.dir
+/Users/bb/Desktop/Build/HMC5882L/build/CMakeFiles/rebuild_cache.dir

@@ -28,9 +28,8 @@ int main(int argc, char** argv) {
         // get raw readings
         hmc5883lGetHeading(&mx, &my, &mz);
 
-        // calculate heading
+        // calculate heading in degrees
         float heading = atan2(my, mx);
-
         if(heading < 0)
             heading += 2 * M_PI;
         
@@ -52,18 +51,17 @@ This will show the current heading in 0.5s intervals:
 ```bash
 pi@raspberrypi:~/hmc5883l/build $ ./hmc5883l
 HMC5883L connection successful
-(X/Y/Z):  154/  27/-344	 Angle: Rad  0.174	Deg    9.944
-(X/Y/Z):  153/  19/-345	 Angle: Rad  0.124	Deg    7.079
-(X/Y/Z):  154/  20/-345	 Angle: Rad  0.129	Deg    7.400
-(X/Y/Z):  156/  20/-344	 Angle: Rad  0.128	Deg    7.306
-(X/Y/Z):  153/  19/-345	 Angle: Rad  0.124	Deg    7.079
-(X/Y/Z):  118/  51/-341	 Angle: Rad  0.408	Deg   23.374
-(X/Y/Z):   33/  78/-340	 Angle: Rad  1.171	Deg   67.068
-(X/Y/Z):  -24/  83/-339	 Angle: Rad  1.852	Deg  106.128
-(X/Y/Z):  -62/  73/-339	 Angle: Rad  2.275	Deg  130.342
-(X/Y/Z): -107/  53/-341	 Angle: Rad  2.682	Deg  153.650
-(X/Y/Z): -133/  35/-341	 Angle: Rad  2.884	Deg  165.256
-
+(X/Y/Z):  154/  27/-344  Angle: Rad  0.174 Deg    9.944
+(X/Y/Z):  153/  19/-345  Angle: Rad  0.124 Deg    7.079
+(X/Y/Z):  154/  20/-345  Angle: Rad  0.129 Deg    7.400
+(X/Y/Z):  156/  20/-344  Angle: Rad  0.128 Deg    7.306
+(X/Y/Z):  153/  19/-345  Angle: Rad  0.124 Deg    7.079
+(X/Y/Z):  118/  51/-341  Angle: Rad  0.408 Deg   23.374
+(X/Y/Z):   33/  78/-340  Angle: Rad  1.171 Deg   67.068
+(X/Y/Z):  -24/  83/-339  Angle: Rad  1.852 Deg  106.128
+(X/Y/Z):  -62/  73/-339  Angle: Rad  2.275 Deg  130.342
+(X/Y/Z): -107/  53/-341  Angle: Rad  2.682 Deg  153.650
+(X/Y/Z): -133/  35/-341  Angle: Rad  2.884 Deg  165.256
 ```
 
 The `i2chelper` functions reassemble some convenience methods from `I2Cdev` and are used internally.
